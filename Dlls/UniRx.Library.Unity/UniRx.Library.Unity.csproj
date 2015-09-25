@@ -30,6 +30,42 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Unity|AnyCPU'">
+    <OutputPath>bin\Unity\</OutputPath>
+    <DefineConstants>TRACE;UniRxLibrary;UNITY_5_2</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UnityWebGL|AnyCPU'">
+    <OutputPath>bin\UnityWebGL\</OutputPath>
+    <DefineConstants>TRACE;UniRxLibrary;UNITY_5_2;UNITY_WEBGL</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UnityAndroid|AnyCPU'">
+    <OutputPath>bin\UnityAndroid\</OutputPath>
+    <DefineConstants>TRACE;UniRxLibrary;UNITY_5_2;UNITY_ANDROID</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UnityIos|AnyCPU'">
+    <OutputPath>bin\UnityIos\</OutputPath>
+    <DefineConstants>TRACE;UniRxLibrary;UNITY_5_2;UNITY_IOS</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -228,7 +264,7 @@
       <Link>UnityEngineBridge\UnityUIComponentExtensions.cs</Link>
     </Compile>
     <Compile Include="..\..\Assets\UniRx\Scripts\UnityEngineBridge\YieldInstructionCache.cs">
-      <Link>YieldInstructionCache.cs</Link>
+      <Link>UnityEngineBridge\YieldInstructionCache.cs</Link>
     </Compile>
     <Compile Include="..\..\Assets\UniRx\Scripts\UnityWinRTBridge\Thread.cs">
       <Link>UnityWinRTBridge\Thread.cs</Link>
